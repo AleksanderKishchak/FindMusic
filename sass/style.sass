@@ -1,0 +1,113 @@
+$light-bg: #EEF7FF
+$dark-bg: #CCDFF0
+
+* 
+	box-sizing: border-box
+body
+	margin: 0
+	padding: 0
+	background: $light-bg
+	font-family: Roboto;
+	font-weight: 400
+
+.visible
+	display: block!important
+.container 
+	margin: 10px 15px
+	.search
+		text-align: center
+		margin-bottom: 50px
+		&__icon
+			width: 30px
+			vertical-align: middle
+		&__button
+			border: none
+			background: transparent
+			outline: none
+			border-radius: 5px
+			transition: all .2s
+			&:hover
+				background-color: #ccc
+		&__input
+			border: none
+			border-radius: 5px
+			padding: 10px 15px 10px 15px
+			outline: none
+			vertical-align: middle
+	.track-list
+		&__header
+			width: 1000px
+			margin-left: 148px
+			display: flex
+			justify-content: flex-start
+			margin-bottom: 30px
+			&>*
+				flex-basis: 25%
+	.panel
+		padding: 10px
+		background: #ccdff0
+		&:nth-child(odd)
+			background-color: inherit
+		&__header
+			position: relative
+		&__thumb
+			border: 2px solid blue
+			display: inline-block
+			margin-right: 30px
+			vertical-align: middle
+		&-info
+			display: inline-flex
+			justify-content: space-around
+			align-items: center
+			width: 1000px
+			height: 110px
+			&>*
+				flex-basis: 25%
+		&__button
+			&:hover
+				cursor: pointer
+			background: none
+			outline: none
+			border: none
+			width: 40px
+			height: 40px
+			position: absolute
+			top: 50%
+			right: 20px
+			transform: translateY(-50%)
+			background: url(../img/add.svg) center center no-repeat
+			background-size: cover
+			&_active
+				background: url(../img/minus.svg) center center no-repeat
+				background-size: cover
+		&__more-info
+			position: relative
+			width: 1000px
+			padding-top: 30px
+			margin-left: 136px
+			display: none
+			.full-track-name
+				font-size: 24px
+				color: #4e453e
+				margin-bottom: 15px
+				&::after
+					content: ''
+					margin-left: 10px
+					display: inline-block
+					width: 16px
+					height: 16px
+					background: url(../img/music-player.svg) center center no-repeat
+					background-size: cover
+			.left-info,
+			.right-info
+				display: inline-block
+				vertical-align: top
+				list-style-type: none
+				margin: 0
+				padding: 0
+				&__item
+					padding: 3px 0
+					span
+						font-weight: bold
+			.right-info
+				margin-left: 331px
