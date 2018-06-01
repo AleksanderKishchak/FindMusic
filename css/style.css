@@ -21,21 +21,34 @@ body {
 
 .container .search {
   text-align: center;
+  margin: 0 auto;
   margin-bottom: 50px;
+  width: 322px;
+  height: 37px;
+  position: relative;
 }
 
 .container .search__icon {
-  width: 30px;
+  width: 15px;
   vertical-align: middle;
 }
 
 .container .search__button {
-  border: none;
-  background: transparent;
+  border-right: 1px solid #CCDFF0;
+  border-top: 1px solid #CCDFF0;
+  border-bottom: 1px solid #CCDFF0;
+  border-left: none;
+  background: #ccc;
   outline: none;
-  border-radius: 5px;
+  height: 37px;
+  padding: 0 15px 2px 15px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
   -webkit-transition: all .2s;
   transition: all .2s;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .container .search__button:hover {
@@ -43,15 +56,23 @@ body {
 }
 
 .container .search__input {
-  border: none;
-  border-radius: 5px;
+  border-top: 1px solid #CCDFF0;
+  border-left: 1px solid #CCDFF0;
+  border-right: none;
+  border-bottom: 1px solid #CCDFF0;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
   padding: 10px 15px 10px 15px;
+  height: 37px;
+  width: 276px;
   outline: none;
   vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.container .track-list__header {
-  width: 1000px;
+.container .track-container__header {
   margin-left: 148px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -62,7 +83,7 @@ body {
   margin-bottom: 30px;
 }
 
-.container .track-list__header > * {
+.container .track-container__header > * {
   -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
 }
@@ -78,9 +99,16 @@ body {
 
 .container .panel__header {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .container .panel__thumb {
+  width: 104px;
   border: 2px solid blue;
   display: inline-block;
   margin-right: 30px;
@@ -96,13 +124,20 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 1000px;
-  height: 110px;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
 }
 
 .container .panel-info > * {
   -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
+}
+
+.container .panel-collection,
+.container .panel-artist,
+.container .panel-track,
+.container .panel-genre {
+  padding-right: 40px;
 }
 
 .container .panel__button {
@@ -135,6 +170,7 @@ body {
   padding-top: 30px;
   margin-left: 136px;
   display: none;
+  position: relative;
 }
 
 .container .panel__more-info .full-track-name {
@@ -173,5 +209,6 @@ body {
 }
 
 .container .panel__more-info .right-info {
-  margin-left: 331px;
+  position: absolute;
+  left: 54%;
 }
